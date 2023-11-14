@@ -1,16 +1,16 @@
-extends Node3D
+extends GridMap
+
 # World aspects
 const GRID_SIZE = 150
 const MESH_SIZE = 1
 const M_HEIGHT = 15
 
-#PORT FOR MULTIPLAYER
+# PORT FOR MULTIPLAYER
 const PORT = 9999
 var enet_peer = ENetMultiplayerPeer.new()
 
-
-@export var fnoise : FastNoiseLite
-@export var grad : GradientTexture1D
+@export var fnoise: FastNoiseLite
+@export var grad: GradientTexture1D
 
 @onready var map = $Map
 @onready var main_menu = $CanvasLayer/MainMenu
@@ -18,45 +18,35 @@ var enet_peer = ENetMultiplayerPeer.new()
 @onready var hud = $CanvasLayer/HUD
 @onready var health_bar = $CanvasLayer/HUD/HealthBar
 
-
-
 var player_scene: PackedScene
 var spawn_radius: float = 20.0
-var fixed_y_position: float = 100.00  #
-
+var fixed_y_position: float = 150.00
 
 var current_x_offset: int = 0
 var current_y_offset: int = 0
 
-var world_ready : bool = false
-var direction : Vector2 = Vector2.ZERO
-var timer_update : float = 0.0
-var speed : float = 0.1 - (50 / 1000.0)
+var world_ready: bool = false
+var direction: Vector2 = Vector2.ZERO
+var timer_update: float = 0.0
+var speed: float = 0.1 - (50 / 1000.0)
 
 func _ready():
 	player_scene = preload("res://player.tscn")
-	
-	
-	
 	create_world()
 	world_ready = true
 	# Spawn the player initially
-	#spawn_player()
-	
-		
-##NEED TO FIND A WAY TO USE THIS CORRECTLY
-#func _process(delta):
-#
-#	timer_update += delta
-#	if direction and timer_update > speed:
-#		timer_update = 0
-#
-#		current_x_offset += direction.x
-#		current_y_offset += direction.y
-#		fnoise.offset.x = current_x_offset
-#		fnoise.offset.y = current_y_offset
-#
-#		#update_world()
+	# spawn_player()
+
+## NEED TO FIND A WAY TO USE THIS CORRECTLY
+# func _process(delta):
+# 	timer_update += delta
+# 	if direction and timer_update > speed:
+# 		timer_update = 0
+# 		current_x_offset += direction.x
+# 		current_y_offset += direction.y
+# 		fnoise.offset.x = current_x_offset
+# 		fnoise.offset.y = current_y_offset
+# 		# update_world()
 
 func create_world():
 	var noise: float
@@ -100,6 +90,7 @@ func create_world():
 				new_mesh.create_convex_collision(k)
 
 	map.position = Vector3(-GRID_SIZE / 2.0 * MESH_SIZE, 0, -GRID_SIZE / 2.0 * MESH_SIZE)
+
 	
 	
 ### THIS NEEDS TO BE ADJUSTED
@@ -126,23 +117,25 @@ func get_noise(x, y):
 func add_player(peer_id):
 	var random_position = Vector3(
 		rand_range(-spawn_radius, spawn_radius),
-		fixed_y_position,
+		fixed_y_position,  # Fixed Y-axis position
 		rand_range(-spawn_radius, spawn_radius)
 	)
-	var player = player_scene.instantiate()  # Use instance() instead of instantiate()
+	var player = player_scene.instantiate()
 	player.name = str(peer_id)
 	player.transform.origin = random_position
 	add_child(player)
 	if player.is_multiplayer_authority():
 		player.health_changed.connect(update_health_bar)
 
+
 func rand_range(min: float, max: float) -> float:
 	return randf() * (max - min) + min
+
 
 func _on_host_button_pressed():
 	main_menu.hide()
 	hud.show()
-
+	
 	enet_peer.create_server(PORT)
 	multiplayer.multiplayer_peer = enet_peer
 	multiplayer.peer_connected.connect(add_player)
@@ -150,28 +143,12 @@ func _on_host_button_pressed():
 	add_player(multiplayer.get_unique_id())
 
 	upnp_setup()
-
+	
 func _on_join_button_pressed():
 	main_menu.hide()
 	hud.show()
 	enet_peer.create_client(address_entry.text, PORT)
 	multiplayer.multiplayer_peer = enet_peer
-
-	# Set a valid Y-axis position for the player spawn
-	var valid_y_position = 100  # Adjust this value based on your map's height
-	var spawn_position = Vector3(
-		rand_range(-spawn_radius, spawn_radius),
-		valid_y_position,
-		rand_range(-spawn_radius, spawn_radius)
-	)
-
-	# Instantiate and position the player
-	var player = player_scene.instance()
-	player.name = str(multiplayer.get_unique_id())
-	player.transform.origin = spawn_position
-	add_child(player)
-	if player.is_multiplayer_authority():
-		player.health_changed.connect(update_health_bar)
 
 func update_health_bar(health_value):
 	health_bar.value = health_value
@@ -204,3 +181,4 @@ func upnp_setup():
 		"UPNP Port Mapping Failed! Error %s" % map_result)
 	
 	print("Success! Join Address: %s" % upnp.query_external_address())
+

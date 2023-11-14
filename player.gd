@@ -69,7 +69,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 	# Adding gun shooting effects
 	if Input.is_action_just_pressed("shoot") and anim_player.current_animation != "shoot":
@@ -166,7 +166,7 @@ func play_shoot_effects():
 	
 	
 	
-@rpc("authority")
+@rpc("any_peer")
 func receive_damage():
 	health -= 1
 	if health <= 0:
