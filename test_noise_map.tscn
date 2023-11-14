@@ -109,6 +109,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,7 +119,7 @@ grow_vertical = 2
 scale = Vector2(0.03, 0.03)
 pivot_offset = Vector2(1278, 720)
 texture = ExtResource("3_we30w")
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="HealthBar" type="ProgressBar" parent="CanvasLayer/HUD"]
 layout_mode = 1

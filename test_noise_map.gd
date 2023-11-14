@@ -100,8 +100,8 @@ func create_world():
 				new_mesh.create_convex_collision(k)
 
 	map.position = Vector3(-GRID_SIZE / 2.0 * MESH_SIZE, 0, -GRID_SIZE / 2.0 * MESH_SIZE)
-
-
+	
+	
 ### THIS NEEDS TO BE ADJUSTED
 #func update_world():
 #	var noise : float
@@ -136,17 +136,6 @@ func add_player(peer_id):
 	if player.is_multiplayer_authority():
 		player.health_changed.connect(update_health_bar)
 
-#func spawn_player():
-#	var random_position = Vector3(
-#		rand_range(-spawn_radius, spawn_radius),
-#		fixed_y_position,  # Fixed Y-axis position
-#		rand_range(-spawn_radius, spawn_radius)
-#	)
-#
-#	# Instantiate the player scene at the random position
-#	var player_instance = player_scene.instantiate()
-#	player_instance.transform.origin = random_position
-#	add_child(player_instance)
 
 func rand_range(min: float, max: float) -> float:
 	return randf() * (max - min) + min

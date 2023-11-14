@@ -39,6 +39,33 @@ material = SubResource("StandardMaterial3D_rp4gv")
 size = Vector2(0.5, 0.5)
 orientation = 2
 
+[sub_resource type="Animation" id="Animation_wmsvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/Pistol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.724428, -0.31404, -0.766718)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/Pistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.74846e-07, 1.4399, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_uweha"]
 resource_name = "idle"
 length = 3.0
@@ -66,33 +93,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(-2, -2),
 "update": 0,
 "values": [Vector3(1.74846e-07, 1.4399, 0), Vector3(-0.200713, 1.44862, -0.244346)]
-}
-
-[sub_resource type="Animation" id="Animation_wmsvw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Head/Camera3D/Pistol:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.724428, -0.31404, -0.766718)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Head/Camera3D/Pistol:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.74846e-07, 1.4399, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vsmm6"]
@@ -189,7 +189,7 @@ fov = 70.0
 target_position = Vector3(0, 0, -5)
 
 [node name="Pistol" parent="Head/Camera3D" instance=ExtResource("2_hq7qv")]
-transform = Transform3D(0.130526, 1.7335e-07, 0.991445, 0, 1, -1.74846e-07, -0.991445, 2.28219e-08, 0.130526, 0.724428, -0.31404, -0.766718)
+transform = Transform3D(0.130523, 1.7335e-07, 0.991445, 0, 1, -1.74846e-07, -0.991445, 2.28214e-08, 0.130523, 0.724428, -0.31404, -0.766718)
 
 [node name="MuzzleFlash" type="GPUParticles3D" parent="Head/Camera3D/Pistol"]
 transform = Transform3D(-0.999999, 6.70552e-08, -1.78814e-07, -6.70552e-08, 0.999999, 2.6077e-08, 2.83122e-07, 3.72537e-09, -1, 0.337471, 0.0767748, 0.00568324)
@@ -203,16 +203,22 @@ process_material = SubResource("ParticleProcessMaterial_oke7l")
 draw_pass_1 = SubResource("PlaneMesh_k0672")
 
 [node name="TextureRect" type="TextureRect" parent="Head/Camera3D"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.485
+anchor_top = 0.485
+anchor_right = 0.515
+anchor_bottom = 0.515
+offset_left = -1239.66
+offset_top = -698.4
+offset_right = 1239.66
+offset_bottom = 698.4
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.03, 0.03)
 pivot_offset = Vector2(1278, 720)
 texture = ExtResource("4_w70bt")
-stretch_mode = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="Hand" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.445774, 0)
