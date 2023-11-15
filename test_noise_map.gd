@@ -22,7 +22,7 @@ var enet_peer = ENetMultiplayerPeer.new()
 
 var player_scene: PackedScene
 var spawn_radius: float = 20.0
-var fixed_y_position: float = 100.00  #
+var fixed_y_position: float = 150.00  #
 
 
 var current_x_offset: int = 0
@@ -158,7 +158,7 @@ func _on_join_button_pressed():
 	multiplayer.multiplayer_peer = enet_peer
 
 	# Set a valid Y-axis position for the player spawn
-	var valid_y_position = 100  # Adjust this value based on your map's height
+	var valid_y_position = 150  # Adjust this value based on your map's height
 	var spawn_position = Vector3(
 		rand_range(-spawn_radius, spawn_radius),
 		valid_y_position,
@@ -166,7 +166,7 @@ func _on_join_button_pressed():
 	)
 
 	# Instantiate and position the player
-	var player = player_scene.instance()
+	var player = player_scene.instantiate()
 	player.name = str(multiplayer.get_unique_id())
 	player.transform.origin = spawn_position
 	add_child(player)

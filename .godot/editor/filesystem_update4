@@ -1,3 +1,5 @@
 res://test_noise_map.tscn
 res://GridMap.gd
 res://tile_gradient.tres
+res://player.tscn
+res://test_noise_map.gd

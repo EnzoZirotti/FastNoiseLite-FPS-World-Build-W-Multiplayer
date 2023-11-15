@@ -78,9 +78,9 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
+"transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector3(0.724428, -0.31404, -0.766718), Vector3(0.724428, -0.31404, -0.766718)]
+"values": [Vector3(0.724428, -0.31404, -0.766718), Vector3(0.724428, -0.210127, -0.766718)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -90,9 +90,9 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
+"transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector3(1.74846e-07, 1.4399, 0), Vector3(-0.200713, 1.44862, -0.244346)]
+"values": [Vector3(-1.09795, 1.87604, -0.403702), Vector3(-0.939314, 2.31475, -0.914368)]
 }
 
 [sub_resource type="Animation" id="Animation_vsmm6"]
@@ -111,6 +111,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0.724428, -0.31404, -0.766718), Vector3(0.642263, -0.270625, -0.766718), Vector3(0.724428, -0.31404, -0.766718), Vector3(0.768059, -0.283105, -0.766718)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/Pistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_n1amy"]
 resource_name = "shoot"
@@ -125,7 +137,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector3(0.724428, -0.268429, -0.766718), Vector3(0.724428, -0.31404, -0.766718)]
+"values": [Vector3(0.604041, -0.268429, -0.766718), Vector3(0.724428, -0.31404, -0.766718)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -137,7 +149,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector3(-1.08149, 1.617, -0.0404434), Vector3(-0.10472, 1.30027, -0.0436332)]
+"values": [Vector3(-0.603317, 1.00505, 0.750327), Vector3(-1.11701, 1.67776, -0.355246)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0y0y5"]
