@@ -30,8 +30,8 @@ signal health_changed(health_value)
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var sight = $Head/Camera3D/sight
-@onready var hand = $Hand
-@onready var touch = $Hand/touch
+@onready var hand = $Head/Hand
+@onready var touch = $Head/Hand/touch
 @onready var anim_player = $AnimationPlayer
 @onready var muzzle_flash = $Head/Camera3D/Pistol/MuzzleFlash
 
@@ -82,9 +82,9 @@ func _unhandled_input(event):
 		if hit_player is StaticBody3D:
 			# Skip damage logic for static bodies
 			return
-
+		elif hit_player is CharacterBody3D:
 		# Assuming other player-related logic here (e.g., apply damage)
-		hit_player.received_damage.rpc_id(hit_player.get_multiplayer_authority())
+			hit_player.receive_damage.rpc_id(hit_player.get_multiplayer_authority())
 
 
 func _physics_process(_delta):

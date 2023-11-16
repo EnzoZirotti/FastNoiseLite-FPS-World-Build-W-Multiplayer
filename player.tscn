@@ -169,18 +169,30 @@ properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/sync = true
 properties/1/watch = false
-properties/2/path = NodePath("Head/Camera3D:position")
+properties/2/path = NodePath("Head/Camera3D:rotation")
 properties/2/spawn = true
 properties/2/sync = true
 properties/2/watch = false
-properties/3/path = NodePath("Head/Camera3D:rotation")
+properties/3/path = NodePath("Head/Camera3D/Pistol:position")
 properties/3/spawn = true
 properties/3/sync = true
 properties/3/watch = false
+properties/4/path = NodePath("Head/Camera3D/Pistol:rotation")
+properties/4/spawn = true
+properties/4/sync = true
+properties/4/watch = false
+properties/5/path = NodePath("Head:position")
+properties/5/spawn = true
+properties/5/sync = true
+properties/5/watch = false
+properties/6/path = NodePath("Head:rotation")
+properties/6/spawn = true
+properties/6/sync = true
+properties/6/watch = false
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_nwta4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -198,7 +210,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0379663)
 fov = 70.0
 
 [node name="sight" type="RayCast3D" parent="Head/Camera3D"]
-target_position = Vector3(0, 0, -5)
+target_position = Vector3(0, 0, -50)
+collision_mask = 4
 
 [node name="Pistol" parent="Head/Camera3D" instance=ExtResource("2_hq7qv")]
 transform = Transform3D(0.130523, 1.7335e-07, 0.991445, 0, 1, -1.74846e-07, -0.991445, 2.28214e-08, 0.130523, 0.724428, -0.31404, -0.766718)
@@ -232,10 +245,10 @@ texture = ExtResource("4_w70bt")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="Hand" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.445774, 0)
+[node name="Hand" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.051221, 0.168388)
 
-[node name="touch" type="RayCast3D" parent="Hand"]
+[node name="touch" type="RayCast3D" parent="Head/Hand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0493849, 0)
 target_position = Vector3(0, 0, -50)
 
