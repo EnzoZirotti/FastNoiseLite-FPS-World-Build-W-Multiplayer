@@ -75,16 +75,16 @@ func _unhandled_input(event):
 	if Input.is_action_just_pressed("shoot") and anim_player.current_animation != "shoot":
 		play_shoot_effects.rpc()
 
-	if sight.is_colliding():
-		var hit_player = sight.get_collider()
+		if sight.is_colliding():
+			var hit_player = sight.get_collider()
 
 		# Check if the collider is a StaticBody3D
-		if hit_player is StaticBody3D:
+			if hit_player is StaticBody3D:
 			# Skip damage logic for static bodies
-			return
-		elif hit_player is CharacterBody3D:
+				return
+			elif hit_player is CharacterBody3D:
 		# Assuming other player-related logic here (e.g., apply damage)
-			hit_player.receive_damage.rpc_id(hit_player.get_multiplayer_authority())
+				hit_player.receive_damage.rpc_id(hit_player.get_multiplayer_authority())
 
 
 func _physics_process(_delta):
