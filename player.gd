@@ -164,14 +164,20 @@ func play_shoot_effects():
 	muzzle_flash.restart()
 	muzzle_flash.emitting = true
 	
-	
+func rand_range(min: float, max: float) -> float:
+	return randf() * (max - min) + min	
 	
 @rpc("any_peer")
 func receive_damage():
 	health -= 1
 	if health <= 0:
 		health = 3
-		position = Vector3.ZERO
+		
+		position = Vector3(
+		rand_range(-20.0, 20.0),
+		150.00,
+		rand_range(-20.0, 20.0)
+	) 
 	health_changed.emit(health)
 
 
