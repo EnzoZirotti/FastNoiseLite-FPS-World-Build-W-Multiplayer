@@ -21,7 +21,7 @@ var enet_peer = ENetMultiplayerPeer.new()
 
 
 var player_scene: PackedScene
-var spawn_radius: float = 20.0
+var spawn_radius: float = 50.0
 var fixed_y_position: float = 150.00  #
 
 

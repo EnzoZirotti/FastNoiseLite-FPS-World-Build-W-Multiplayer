@@ -3,3 +3,4 @@ res://GridMap.gd
 res://tile_gradient.tres
 res://test_noise_map.tscn
 res://player.gd
+res://test_noise_map.gd
