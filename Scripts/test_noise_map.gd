@@ -36,10 +36,10 @@ var speed : float = 0.1 - (50 / 1000.0)
 func _ready():
 	player_scene = preload("res://player.tscn")
 	
-	
-	
-	create_world()
-	world_ready = true
+#
+#
+#	create_world()
+#	world_ready = true
 	# Spawn the player initially
 	#spawn_player()
 	
@@ -58,69 +58,69 @@ func _ready():
 #
 #		#update_world()
 
-func create_world():
-	var noise: float
-	var x: float
-	var z: float
-	var y: float
-	var mat_mesh: StandardMaterial3D
-	var new_mesh: MeshInstance3D
-	var static_body: StaticBody3D
-	var collision_shape: CollisionShape3D
-
-	for i in range(GRID_SIZE):
-		for j in range(GRID_SIZE):
-			noise = get_noise(i, j)
-			if noise < 2:
-				y = M_HEIGHT / 2
-			else:
-				y = round(noise * M_HEIGHT)
-			x = i * MESH_SIZE + MESH_SIZE / 2
-			z = j * MESH_SIZE + MESH_SIZE / 2
-
-			new_mesh = MeshInstance3D.new()
-			new_mesh.mesh = BoxMesh.new()
-			new_mesh.mesh.size = Vector3(MESH_SIZE, 50, MESH_SIZE)
-			map.add_child(new_mesh)
-			mat_mesh = StandardMaterial3D.new()
-			mat_mesh.albedo_color = grad.gradient.get_color(floor(noise))
-			new_mesh.mesh.material = mat_mesh
-			new_mesh.position = Vector3(x, y, z)
-			new_mesh.name = "Tile_" + str(i) + '_' + str(j)
-
-			# Create a StaticBody3D for collision
-			static_body = StaticBody3D.new()
-			new_mesh.add_child(static_body)  # Attach to the MeshInstance3D
-
-			# Add a CollisionShape3D for collision
-			for k in range(3):
-				collision_shape = CollisionShape3D.new()
-				collision_shape.shape = ConvexPolygonShape3D.new()  # Replace with your desired shape (e.g., BoxShape3D, SphereShape3D, etc.)
-				static_body.add_child(collision_shape)
-				new_mesh.create_convex_collision(k)
-
-	map.position = Vector3(-GRID_SIZE / 2.0 * MESH_SIZE, 0, -GRID_SIZE / 2.0 * MESH_SIZE)
-	
-	
-### THIS NEEDS TO BE ADJUSTED
-#func update_world():
-#	var noise : float
-#	var tile_mesh
+#func create_world():
+#	var noise: float
+#	var x: float
+#	var z: float
+#	var y: float
+#	var mat_mesh: StandardMaterial3D
+#	var new_mesh: MeshInstance3D
+#	var static_body: StaticBody3D
+#	var collision_shape: CollisionShape3D
+#
 #	for i in range(GRID_SIZE):
 #		for j in range(GRID_SIZE):
 #			noise = get_noise(i, j)
-#			tile_mesh = map.get_node("Tile_" + str(i) + '_' + str(j))
-#			tile_mesh.mesh.material.albedo_color = grad.gradient.get_color(floor(noise))
 #			if noise < 2:
-#				tile_mesh.position.y = M_HEIGHT / 2
+#				y = M_HEIGHT / 2
 #			else:
-#				tile_mesh.position.y = round(noise * M_HEIGHT)
-#	offset_lbl.text = "Offset X,Y : " + str(current_x_offset) + " , " + str(current_y_offset)
-
-func get_noise(x, y):
-#	return s_noise.get_noise_2d(x, y)
-	var n = remap(fnoise.get_noise_2d(x, y), -1.0, 1.0, 0.0, 10.0)
-	return clampf(n, 0.0, 9.99)
+#				y = round(noise * M_HEIGHT)
+#			x = i * MESH_SIZE + MESH_SIZE / 2
+#			z = j * MESH_SIZE + MESH_SIZE / 2
+#
+#			new_mesh = MeshInstance3D.new()
+#			new_mesh.mesh = BoxMesh.new()
+#			new_mesh.mesh.size = Vector3(MESH_SIZE, 50, MESH_SIZE)
+#			map.add_child(new_mesh)
+#			mat_mesh = StandardMaterial3D.new()
+#			mat_mesh.albedo_color = grad.gradient.get_color(floor(noise))
+#			new_mesh.mesh.material = mat_mesh
+#			new_mesh.position = Vector3(x, y, z)
+#			new_mesh.name = "Tile_" + str(i) + '_' + str(j)
+#
+#			# Create a StaticBody3D for collision
+#			static_body = StaticBody3D.new()
+#			new_mesh.add_child(static_body)  # Attach to the MeshInstance3D
+#
+#			# Add a CollisionShape3D for collision
+#			for k in range(3):
+#				collision_shape = CollisionShape3D.new()
+#				collision_shape.shape = ConvexPolygonShape3D.new()  # Replace with your desired shape (e.g., BoxShape3D, SphereShape3D, etc.)
+#				static_body.add_child(collision_shape)
+#				new_mesh.create_convex_collision(k)
+#
+#	map.position = Vector3(-GRID_SIZE / 2.0 * MESH_SIZE, 0, -GRID_SIZE / 2.0 * MESH_SIZE)
+#
+#
+#### THIS NEEDS TO BE ADJUSTED
+##func update_world():
+##	var noise : float
+##	var tile_mesh
+##	for i in range(GRID_SIZE):
+##		for j in range(GRID_SIZE):
+##			noise = get_noise(i, j)
+##			tile_mesh = map.get_node("Tile_" + str(i) + '_' + str(j))
+##			tile_mesh.mesh.material.albedo_color = grad.gradient.get_color(floor(noise))
+##			if noise < 2:
+##				tile_mesh.position.y = M_HEIGHT / 2
+##			else:
+##				tile_mesh.position.y = round(noise * M_HEIGHT)
+##	offset_lbl.text = "Offset X,Y : " + str(current_x_offset) + " , " + str(current_y_offset)
+#
+#func get_noise(x, y):
+##	return s_noise.get_noise_2d(x, y)
+#	var n = remap(fnoise.get_noise_2d(x, y), -1.0, 1.0, 0.0, 10.0)
+#	return clampf(n, 0.0, 9.99)
 
 
 func add_player(peer_id):

@@ -1,9 +1,9 @@
 [gd_scene load_steps=18 format=3 uid="uid://cavqgevef4gns"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_nwta4"]
-[ext_resource type="PackedScene" uid="uid://djowi7msgciex" path="res://Pistol.blend" id="2_hq7qv"]
-[ext_resource type="Texture2D" uid="uid://m8e16mlqsfuw" path="res://addons/kenney_particle_pack/star_09.png" id="3_oyx5e"]
-[ext_resource type="Texture2D" uid="uid://4wy4xhmegjrl" path="res://addons/kenney_particle_pack/circle_05.png" id="4_w70bt"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qlf6w"]
+[ext_resource type="PackedScene" uid="uid://djowi7msgciex" path="res://Blend/Pistol.blend" id="2_a7ryn"]
+[ext_resource type="Texture2D" uid="uid://m8e16mlqsfuw" path="res://addons/kenney_particle_pack/star_09.png" id="3_u6njg"]
+[ext_resource type="Texture2D" uid="uid://4wy4xhmegjrl" path="res://addons/kenney_particle_pack/circle_05.png" id="4_df76q"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_b6qhr"]
 
@@ -28,7 +28,7 @@ transparency = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.94902, 1, 0.164706, 1)
-albedo_texture = ExtResource("3_oyx5e")
+albedo_texture = ExtResource("3_u6njg")
 billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
@@ -193,7 +193,7 @@ properties/6/watch = false
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 7
 collision_mask = 7
-script = ExtResource("1_nwta4")
+script = ExtResource("1_qlf6w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_b6qhr")
@@ -213,7 +213,7 @@ fov = 70.0
 target_position = Vector3(0, 0, -50)
 collision_mask = 4
 
-[node name="Pistol" parent="Head/Camera3D" instance=ExtResource("2_hq7qv")]
+[node name="Pistol" parent="Head/Camera3D" instance=ExtResource("2_a7ryn")]
 transform = Transform3D(0.130523, 1.7335e-07, 0.991445, 0, 1, -1.74846e-07, -0.991445, 2.28214e-08, 0.130523, 0.724428, -0.31404, -0.766718)
 
 [node name="MuzzleFlash" type="GPUParticles3D" parent="Head/Camera3D/Pistol"]
@@ -241,7 +241,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.03, 0.03)
 pivot_offset = Vector2(1278, 720)
-texture = ExtResource("4_w70bt")
+texture = ExtResource("4_df76q")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 

@@ -1,7 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ddn07ftnihoiu"]
 
-[ext_resource type="Script" path="res://GridMap.gd" id="1_as4db"]
+[ext_resource type="Script" path="res://Scripts/GridMap.gd" id="1_as4db"]
 [ext_resource type="Texture2D" uid="uid://4wy4xhmegjrl" path="res://addons/kenney_particle_pack/circle_05.png" id="3_08434"]
+
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h8nwc"]
 ground_bottom_color = Color(0.207843, 0.172549, 0.745098, 1)
