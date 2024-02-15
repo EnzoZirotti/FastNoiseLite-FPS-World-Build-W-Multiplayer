@@ -1,7 +1,6 @@
-res://Scenes/test_noise_map.tscn
+res://Scenes/player.tscn
 res://tile_gradient.tres
 res://Shaders/BlendTextures.gdshader
 res://Scenes/test_noise_map.gdshader
-res://Scenes1/Player.tscn
-res://Scenes/player.tscn
-res://Zombie/zombie.tscn
+res://Scenes/test_noise_map.tscn
+res://Scripts/player.gd
