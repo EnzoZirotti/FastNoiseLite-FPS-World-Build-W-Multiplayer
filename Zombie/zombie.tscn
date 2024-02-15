@@ -2206,11 +2206,11 @@ mesh = SubResource("ArrayMesh_ighqr")
 skin = SubResource("Skin_ktx4y")
 
 [node name="Physical Bone mixamorig_Hips" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.544491, -0.683549, 0.468648, 0.0295659, -0.544854, -0.827555, 0.825787, 0.4723, -0.27914, -1.42307, 128.784, -51.4865)
+transform = Transform3D(0.544491, -0.683548, 0.468648, 0.0295658, -0.544854, -0.827554, 0.825787, 0.4723, -0.27914, -1.42308, 128.784, -51.4865)
 collision_layer = 2
 collision_mask = 2
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0604, 52.4503, 119.885)
-body_offset = Transform3D(0.520354, -0.715401, 0.4484, -0.841225, -0.425876, 0.30573, -0.0290073, -0.54222, -0.829375, 1.49017, -42.9675, 126.881)
+body_offset = Transform3D(0.520354, -0.715401, 0.4484, -0.841225, -0.425876, 0.30573, -0.0290074, -0.54222, -0.829375, 1.49016, -42.9675, 126.881)
 bone_name = "mixamorig_Hips"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Physical Bone mixamorig_Hips"]
@@ -2218,12 +2218,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_3a1xl")
 
 [node name="Physical Bone mixamorig_Spine" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(2.55603, 0.862566, -0.606227, 0.261137, -2.08652, -1.78464, -0.996312, 1.58625, -2.01297, -32.8498, 159.58, -149.543)
+transform = Transform3D(2.556, 0.862564, -0.606224, 0.261125, -2.0865, -1.78462, -0.996289, 1.58624, -2.01296, -32.85, 159.578, -149.542)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01036, 58.5976, 20.4965)
-body_offset = Transform3D(2.58102, 0.682038, -0.713467, 0.961602, -1.91869, 1.71797, -0.0881509, -1.86204, -2.0357, -20.1535, 79.1518, 150.659)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01027, 58.5975, 20.4964)
+body_offset = Transform3D(2.58099, 0.682038, -0.713462, 0.961579, -1.91868, 1.71796, -0.0881562, -1.86203, -2.03567, -20.1538, 79.1508, 150.657)
 bone_name = "mixamorig_Spine"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2234,12 +2234,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_1lfry")
 
 [node name="Physical Bone mixamorig_Spine1" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-1.26839, 2.43758, 2.00614, 1.35978, 2.35403, -2.00714, -2.8398, 0.0456692, -1.84925, -176.173, 4.84227, -135.522)
+transform = Transform3D(-1.26839, 2.43758, 2.00613, 1.35978, 2.35402, -2.00712, -2.83978, 0.0456725, -1.84923, -176.173, 4.84208, -135.522)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3837, 36.6783, 26.4835)
-body_offset = Transform3D(-1.08871, 2.64047, 1.84774, 3.11914, 0.393153, 1.27217, 0.779728, 2.08775, -2.53779, -174.507, 34.1829, 11.2065)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3838, 36.6784, 26.4836)
+body_offset = Transform3D(-1.08871, 2.64047, 1.84773, 3.11912, 0.393148, 1.27216, 0.779726, 2.08774, -2.53777, -174.507, 34.1827, 11.2064)
 bone_name = "mixamorig_Spine1"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2250,12 +2250,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_2nsk6")
 
 [node name="Physical Bone mixamorig_Neck" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1.40106, -0.0966206, 0.328761, 0.529668, 1.31164, -0.659015, -0.273642, 2.04495, 0.437454, -116.93, 178.266, -159.966)
+transform = Transform3D(1.40105, -0.0966207, 0.328762, 0.529664, 1.31164, -0.659012, -0.273642, 2.04493, 0.437453, -116.929, 178.265, -159.966)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.663, -36.5504, 208.921)
-body_offset = Transform3D(1.4042, -0.0939814, 0.32463, 0.465007, -1.30694, -0.67456, 0.361063, 2.04808, -0.416336, -114.314, 78.902, 150.768)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6624, -36.5504, 208.92)
+body_offset = Transform3D(1.4042, -0.0939815, 0.324631, 0.465005, -1.30693, -0.674558, 0.36106, 2.04807, -0.416333, -114.313, 78.9013, 150.767)
 bone_name = "mixamorig_Neck"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2266,12 +2266,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_73gso")
 
 [node name="Physical Bone mixamorig_Head" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.0967566, 0.608154, 0.154711, 0.587611, -0.145782, 0.222968, 0.252583, 0.106489, -0.581051, -436.756, -90.3311, -71.8706)
+transform = Transform3D(0.0967548, 0.608155, 0.154711, 0.587611, -0.145782, 0.222967, 0.252584, 0.106489, -0.58105, -436.755, -90.3298, -71.8699)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.414, 594.207, 351.427)
-body_offset = Transform3D(-0.278656, 0.571023, 0.0410181, -0.139821, -0.108857, 0.616739, 0.566788, 0.25402, 0.17094, -298.431, -124.313, -323.472)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.412, 594.204, 351.427)
+body_offset = Transform3D(-0.278657, 0.571024, 0.0410182, -0.139821, -0.108857, 0.616738, 0.566787, 0.25402, 0.17094, -298.431, -124.313, -323.47)
 bone_name = "mixamorig_Head"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2282,12 +2282,12 @@ transform = Transform3D(37.15, 1.84015e-06, 7.66731e-07, -1.84015e-06, 37.15, 0.
 shape = SubResource("SphereShape3D_e78b0")
 
 [node name="Physical Bone mixamorig_LeftShoulder" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-3.32345, -2.56116, -0.0189338, -0.167213, 0.242081, -4.16924, 2.54619, -3.32285, -0.295546, -100.099, -313.315, -112.943)
+transform = Transform3D(-3.32346, -2.56116, -0.0189325, -0.167209, 0.242073, -4.16922, 2.54617, -3.32285, -0.295551, -100.098, -313.314, -112.943)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1645, -4.16863, -76.1037)
-body_offset = Transform3D(-1.46412, 0.901548, 3.81246, -1.52, -3.90267, 0.327502, 3.61971, -1.27117, 1.6817, 252.665, -34.1547, 224.632)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1645, -4.16855, -76.1038)
+body_offset = Transform3D(-1.46412, 0.901551, 3.81245, -1.52001, -3.90267, 0.327498, 3.6197, -1.27116, 1.68169, 252.664, -34.1549, 224.631)
 bone_name = "mixamorig_LeftShoulder"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2298,12 +2298,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_3p73r")
 
 [node name="Physical Bone mixamorig_LeftArm" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-0.693372, -0.510132, 0.350778, 0.603795, -0.454562, 0.542147, -0.125745, 0.63264, 0.67263, 403.042, -268.507, -602.89)
+transform = Transform3D(-0.693373, -0.510131, 0.350776, 0.603794, -0.454556, 0.542139, -0.125745, 0.632635, 0.672627, 403.043, -268.504, -602.885)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.512, 420.038, 370.881)
-body_offset = Transform3D(-0.573876, 0.62836, -0.375459, -0.360937, 0.170523, 0.842101, 0.633669, 0.665718, 0.138912, 126.967, -225.67, -609.019)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.511, 420.039, 370.879)
+body_offset = Transform3D(-0.573874, 0.628352, -0.375452, -0.360938, 0.17052, 0.842096, 0.63367, 0.665716, 0.138911, 126.965, -225.665, -609.017)
 bone_name = "mixamorig_LeftArm"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2314,12 +2314,12 @@ transform = Transform3D(0.956067, 0.28949, 0.0461809, -0.0881022, 0.133494, 0.98
 shape = SubResource("CapsuleShape3D_malmc")
 
 [node name="Physical Bone mixamorig_LeftForeArm" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1.32901, -0.527387, -0.0551849, 0.534269, 1.26543, 0.343145, -0.0786844, -0.334905, 1.38781, 693.712, 202.752, -70.8325)
+transform = Transform3D(1.32901, -0.527387, -0.0551825, 0.534269, 1.26543, 0.343144, -0.0786847, -0.334902, 1.38781, 693.709, 202.751, -70.8328)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -477.652, 63.3349, -48.6075)
-body_offset = Transform3D(-0.059557, -1.22059, 0.71659, 0.957501, 0.49264, 0.941415, -1.06656, 0.50899, 0.804397, 83.6902, 471.91, -502.58)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -477.648, 63.3345, -48.6074)
+body_offset = Transform3D(-0.0595565, -1.22059, 0.716591, 0.957502, 0.49264, 0.941415, -1.06656, 0.508991, 0.804395, 83.69, 471.908, -502.578)
 bone_name = "mixamorig_LeftForeArm"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2330,12 +2330,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_glwyk")
 
 [node name="Physical Bone mixamorig_LeftHand" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1.39986, 0.458155, -0.896893, -0.625835, -0.806316, -1.39498, -0.783098, 1.4557, -0.491856, -187.365, -633.307, 661.818)
+transform = Transform3D(1.39986, 0.458154, -0.896891, -0.625838, -0.806315, -1.39498, -0.783101, 1.4557, -0.491855, -187.363, -633.297, 661.817)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.803, -520.552, -254.662)
-body_offset = Transform3D(0.73007, 1.56462, -0.00934893, 0.40475, -0.198607, -1.66892, -1.50589, 0.70117, -0.454881, 686.657, -597.933, 507.871)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.803, -520.55, -254.658)
+body_offset = Transform3D(0.730071, 1.56462, -0.00934893, 0.404749, -0.198606, -1.66892, -1.50589, 0.70117, -0.45488, 686.653, -597.925, 507.872)
 bone_name = "mixamorig_LeftHand"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2346,12 +2346,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_b4cnc")
 
 [node name="Physical Bone mixamorig_LeftHandThumb1" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-4.37256, 0.865725, 2.5205, 1.33299, 4.88099, 0.603478, -2.30828, 1.15514, -4.42912, 197.502, -1334.41, 1265)
+transform = Transform3D(-4.37255, 0.86572, 2.52049, 1.33299, 4.88096, 0.603473, -2.30828, 1.15513, -4.42912, 197.504, -1334.4, 1265)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.806, 192.561, 247.549)
-body_offset = Transform3D(-5.05355, -0.355318, 0.752125, -0.347883, 5.07745, 0.021332, -0.751613, -0.0335522, -5.07623, 972.818, -907.925, 1425.28)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.805, 192.562, 247.548)
+body_offset = Transform3D(-5.05354, -0.355316, 0.752122, -0.347882, 5.07742, 0.0213304, -0.75162, -0.0335481, -5.07622, 972.816, -907.922, 1425.27)
 bone_name = "mixamorig_LeftHandThumb1"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2362,12 +2362,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_0c3oy")
 
 [node name="Physical Bone mixamorig_LeftHandThumb2" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(2.15739, -1.18618, 0.548876, 0.580371, 1.82413, 1.6172, -1.17947, -1.26508, 1.81238, -86.0513, -720.447, 616.442)
+transform = Transform3D(2.15738, -1.18618, 0.548878, 0.580367, 1.82413, 1.6172, -1.17947, -1.26508, 1.81238, -86.0513, -720.446, 616.444)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.878, 340.372, -0.094574)
-body_offset = Transform3D(1.77598, -1.77417, 0.245728, 0.557819, 0.882916, 2.26551, -1.70793, -1.55167, 1.00419, 163.672, -438.577, 951.599)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.879, 340.372, -0.0946198)
+body_offset = Transform3D(1.77598, -1.77417, 0.245728, 0.557815, 0.882913, 2.26551, -1.70793, -1.55167, 1.00419, 163.672, -438.575, 951.6)
 bone_name = "mixamorig_LeftHandThumb2"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2378,12 +2378,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_mpkkg")
 
 [node name="Physical Bone mixamorig_RightArm" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.707386, -1.04872, 0.514194, 0.081976, 0.647072, 1.19644, -1.16677, -0.589941, 0.398389, 293.857, 171.636, -11.3383)
+transform = Transform3D(0.707388, -1.04872, 0.514194, 0.0819764, 0.647067, 1.19643, -1.16678, -0.589944, 0.398388, 293.856, 171.634, -11.3391)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4356, 157.849, -223.577)
-body_offset = Transform3D(-0.316494, -0.0783629, 1.32302, -1.2488, -0.450812, -0.321177, 0.45696, -1.28731, 0.0320069, 294.42, -54.8899, 230.205)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4356, 157.849, -223.575)
+body_offset = Transform3D(-0.316494, -0.0783702, 1.32302, -1.2488, -0.450812, -0.321177, 0.456961, -1.28731, 0.0320079, 294.418, -54.8895, 230.205)
 bone_name = "mixamorig_RightArm"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2394,12 +2394,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_364g5")
 
 [node name="Physical Bone mixamorig_LeftUpLeg" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.00205354, -0.314588, 1.36232, -0.0612848, -1.35908, -0.315667, 1.39316, -0.0584377, -0.0177934, -194.811, -282.67, -175.372)
+transform = Transform3D(0.00205253, -0.314588, 1.36233, -0.0612839, -1.35908, -0.315667, 1.39317, -0.0584412, -0.0177904, -194.812, -282.668, -175.371)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.2688, -233.311, 96.6289)
-body_offset = Transform3D(0.387102, -0.0687091, -1.34236, 0.985862, -0.928876, 0.33193, -0.907128, -1.04017, -0.209175, 92.2856, -303.279, -172.336)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.267, -233.31, 96.6286)
+body_offset = Transform3D(0.387107, -0.0687093, -1.34237, 0.985871, -0.928877, 0.331936, -0.907135, -1.04017, -0.209177, 92.2865, -303.277, -172.335)
 bone_name = "mixamorig_LeftUpLeg"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2410,12 +2410,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_n4dyc")
 
 [node name="Physical Bone mixamorig_LeftLeg" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.685916, -0.712056, -0.0731003, 0.706837, 0.69229, -0.0649688, 0.0979424, -0.000174299, 0.982271, 712.084, 479.319, 668.345)
+transform = Transform3D(0.685918, -0.712055, -0.0731016, 0.706835, 0.692287, -0.0649682, 0.0979426, -0.000174131, 0.982268, 712.081, 479.318, 668.346)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -875.743, 181.785, -644.676)
-body_offset = Transform3D(-0.418338, 0.815565, 0.383248, -0.145375, -0.475441, 0.85115, 0.885185, 0.30838, 0.321071, -267.543, 507.832, 926.122)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -875.74, 181.782, -644.679)
+body_offset = Transform3D(-0.41834, 0.815564, 0.383248, -0.145374, -0.47544, 0.851147, 0.885184, 0.308378, 0.32107, -267.54, 507.833, 926.121)
 bone_name = "mixamorig_LeftLeg"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2426,12 +2426,12 @@ transform = Transform3D(1, 1.58325e-08, 3.72529e-09, -8.3819e-09, -2.98023e-08, 
 shape = SubResource("CapsuleShape3D_ti31v")
 
 [node name="Physical Bone mixamorig_LeftFoot" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-0.106391, -2.63497, 0.537393, 0.3614, 0.516881, 2.62588, -2.68304, 0.172684, 0.331039, 931.416, 30.0858, -672.007)
+transform = Transform3D(-0.10639, -2.63496, 0.537398, 0.361397, 0.51688, 2.62588, -2.68303, 0.172679, 0.331037, 931.402, 30.0857, -671.995)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -230.659, 339.21, -45.0612)
-body_offset = Transform3D(-0.110105, 2.53103, 0.909193, -1.63096, -0.786947, 2.00638, 2.16067, -0.463274, 1.56251, -842.978, -18.8463, 725.932)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -230.656, 339.205, -45.0606)
+body_offset = Transform3D(-0.110107, 2.53103, 0.909189, -1.63096, -0.78695, 2.00638, 2.16066, -0.46327, 1.56251, -842.965, -18.8448, 725.92)
 bone_name = "mixamorig_LeftFoot"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2442,12 +2442,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_64wm2")
 
 [node name="Physical Bone mixamorig_RightUpLeg" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.672748, -0.319097, 0.859928, -0.254384, -1.08564, -0.207664, 0.869167, -0.0691824, -0.724814, 5.22607, -5.60347, -165.784)
+transform = Transform3D(0.67275, -0.319097, 0.859927, -0.254384, -1.08564, -0.207662, 0.869165, -0.0691829, -0.72481, 5.22606, -5.60343, -165.784)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.7645, -5.25572, -54.8765)
-body_offset = Transform3D(-0.77749, 0.696328, -0.43849, 0.284757, -0.330781, -1.05502, -0.766274, -0.831225, 0.0510758, 15.1784, -72.6664, 33.5023)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.7646, -5.25578, -54.8767)
+body_offset = Transform3D(-0.77749, 0.696327, -0.438491, 0.284755, -0.330779, -1.05502, -0.766273, -0.831221, 0.0510758, 15.1783, -72.6662, 33.5023)
 bone_name = "mixamorig_RightUpLeg"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2458,12 +2458,12 @@ transform = Transform3D(1, 1.49012e-08, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08
 shape = SubResource("CapsuleShape3D_ijgyl")
 
 [node name="Physical Bone mixamorig_RightLeg" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.066237, -0.894365, 0.418017, 0.618917, 0.361655, 0.676747, -0.763107, 0.217345, 0.586934, 474.521, 155.877, 193.283)
+transform = Transform3D(0.0662375, -0.894365, 0.418018, 0.618913, 0.361654, 0.676742, -0.763108, 0.217344, 0.586932, 474.52, 155.876, 193.283)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.7856, 358.554, -455.141)
-body_offset = Transform3D(0.0953591, 0.665761, -0.725731, -0.97985, 0.0839198, -0.0528127, 0.0240619, 0.726389, 0.669136, -575.39, 11.3128, 42.4945)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.7859, 358.552, -455.142)
+body_offset = Transform3D(0.0953595, 0.665762, -0.72573, -0.979848, 0.0839195, -0.0528117, 0.024059, 0.726388, 0.66913, -575.389, 11.3137, 42.4942)
 bone_name = "mixamorig_RightLeg"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -2474,12 +2474,12 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_3w8re")
 
 [node name="Physical Bone mixamorig_RightFoot" type="PhysicalBone3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1.24129, -1.94531, -0.971539, 2.23314, 1.11496, 0.470017, 0.0712458, -1.07223, 2.24797, 188.248, 194.126, 136.265)
+transform = Transform3D(1.24129, -1.94532, -0.971537, 2.23313, 1.11496, 0.470011, 0.0712517, -1.07224, 2.24797, 188.247, 194.124, 136.264)
 collision_layer = 2
 collision_mask = 2
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.371, 60.1024, -32.764)
-body_offset = Transform3D(-2.19042, 1.24803, 0.289971, 0.798358, 0.810559, 2.22578, 1.0476, 1.9906, -1.08629, -318.22, 116.316, -34.3674)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.371, 60.1018, -32.7636)
+body_offset = Transform3D(-2.19042, 1.24803, 0.289972, 0.798354, 0.810557, 2.22577, 1.04759, 1.9906, -1.08629, -318.219, 116.315, -34.3681)
 bone_name = "mixamorig_RightFoot"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
