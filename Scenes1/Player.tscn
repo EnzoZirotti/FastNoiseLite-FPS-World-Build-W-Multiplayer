@@ -143,12 +143,9 @@ _data = {
 "RESET": SubResource("Animation_0y4ne")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouch_shapecast", "animation_player", "camera")]
+[node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968488, 0)
 script = ExtResource("1_vf38l")
-crouch_shapecast = NodePath("Head/ShapeCast3D")
-animation_player = NodePath("AnimationPlayer")
-camera = NodePath("Head/Camera3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007, 0.0383685, -0.002)

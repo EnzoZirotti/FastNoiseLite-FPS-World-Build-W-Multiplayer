@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708034857
+::res://::1708035011
 export_presets.cfg::TextFile::-1::1708033668::0::1::::<><>::
 icon.svg::CompressedTexture2D::2725702498027504549::1708033668::1708033668::1::::<><>::
 README.md::TextFile::-1::1708033668::0::1::::<><>::
-tile_gradient.tres::Gradient::1436001806566412518::1708033955::0::1::::<><>::
+tile_gradient.tres::Gradient::1436001806566412518::1708035011::0::1::::<><>::
 WorldScreenshot_test.png::CompressedTexture2D::2852988268191014309::1708033668::1708033668::1::::<><>::
 ::res://addons/::1708033668
 ::res://addons/kenney_particle_pack/::1708033668
@@ -105,7 +105,7 @@ trace_04_rotated.png::CompressedTexture2D::2167645541691488952::1708033668::1708
 trace_05_rotated.png::CompressedTexture2D::5445533664415084995::1708033668::1708033668::1::::<><>::
 trace_06_rotated.png::CompressedTexture2D::5270594451005541626::1708033668::1708033668::1::::<><>::
 trace_07_rotated.png::CompressedTexture2D::9125264048833019608::1708033668::1708033668::1::::<><>::
-::res://Blend/::1708034841
+::res://Blend/::1708034861
 map.glb::PackedScene::2076433295173515059::1708034841::1708034861::1::::<><>::uid://jw4ghj7mcn3q::::res://Blend/map_Rocks007_1K-JPG_Color.png<>uid://esoap2ddv48s::::res://Blend/map_Rocks007_1K-JPG_Roughness.png<>uid://cre4pw1k37s2f::::res://Blend/map_Rocks007_1K-JPG_NormalGL.png
 Pistol.blend::PackedScene::7821214692681334127::1708033668::1708033668::1::::<><>::
 map_Rocks007_1K-JPG_NormalGL.png::CompressedTexture2D::5976097996119461731::1708034858::1708034861::1::::<><>::
@@ -130,10 +130,10 @@ license.txt::TextFile::-1::1707717023::0::1::::<><>::
 scene.gltf::PackedScene::3444024742188274286::1707717023::1708033821::1::::<><>::uid://hj5hlfs43d1e
 ::res://oak_forest_tree_pack/textures/::1708033818
 nature_bark_pear_01_l_0001_baseColor.jpeg::CompressedTexture2D::511735901931662772::1707717023::1708033818::1::::<><>::
-::res://Scenes/::1708033955
+::res://Scenes/::1708035145
 grid_map.tscn::PackedScene::7398240855589973108::1708033668::0::1::::<><>::res://Scripts/GridMap.gd<>uid://4wy4xhmegjrl
-player.tscn::PackedScene::4817175729593014108::1708033668::0::1::::<><>::res://Scripts/player.gd<>uid://djowi7msgciex
-test_noise_map.tscn::PackedScene::3885596525657841448::1708033955::0::1::::<><>::res://Scripts/test_noise_map.gd<>uid://upu0fncbm0tm::::res://tile_gradient.tres<>uid://4wy4xhmegjrl::::res://addons/kenney_particle_pack/circle_05.png
+player.tscn::PackedScene::4817175729593014108::1708035043::0::1::::<><>::res://Scripts/player.gd<>uid://djowi7msgciex::::res://Blend/Pistol.blend<>uid://m8e16mlqsfuw::::res://addons/kenney_particle_pack/star_09.png<>uid://4wy4xhmegjrl::::res://addons/kenney_particle_pack/circle_05.png<>uid://clvr7vot4udqq::::res://Sounds/concrete-footsteps-6752.mp3<>uid://degj0cgbl76er::::res://Sounds/Jump3.wav<>uid://bg8thkpday1nc::::res://Sounds/running-1-6846.mp3
+test_noise_map.tscn::PackedScene::3885596525657841448::1708035145::0::1::::<><>::res://Scripts/test_noise_map.gd<>uid://upu0fncbm0tm::::res://tile_gradient.tres<>uid://4wy4xhmegjrl::::res://addons/kenney_particle_pack/circle_05.png
 ::res://Scenes1/::1708033748
 ball.gd::GDScript::-1::1705382709::0::1::::<>RigidBody3D<>::
 ball.tscn::PackedScene::2815785425463191099::1705561889::0::1::::<><>::res://Scenes/ball.gd
