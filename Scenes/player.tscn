@@ -1,9 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://cavqgevef4gns"]
+[gd_scene load_steps=22 format=3 uid="uid://cavqgevef4gns"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qlf6w"]
 [ext_resource type="PackedScene" uid="uid://djowi7msgciex" path="res://Blend/Pistol.blend" id="2_a7ryn"]
 [ext_resource type="Texture2D" uid="uid://m8e16mlqsfuw" path="res://addons/kenney_particle_pack/star_09.png" id="3_u6njg"]
 [ext_resource type="Texture2D" uid="uid://4wy4xhmegjrl" path="res://addons/kenney_particle_pack/circle_05.png" id="4_df76q"]
+[ext_resource type="AudioStream" uid="uid://clvr7vot4udqq" path="res://Sounds/concrete-footsteps-6752.mp3" id="5_j10ok"]
+[ext_resource type="AudioStream" uid="uid://degj0cgbl76er" path="res://Sounds/Jump3.wav" id="6_65bml"]
+[ext_resource type="AudioStream" uid="uid://bg8thkpday1nc" path="res://Sounds/running-1-6846.mp3" id="7_ttvpd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_b6qhr"]
 
@@ -38,6 +41,8 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_rp4gv")
 size = Vector2(0.5, 0.5)
 orientation = 2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lm61x"]
 
 [sub_resource type="Animation" id="Animation_wmsvw"]
 length = 0.001
@@ -252,6 +257,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.051221, 0.168388)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0493849, 0)
 target_position = Vector3(0, 0, -50)
 
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00906104, -0.0579171, 0.143207)
+shape = SubResource("SphereShape3D_lm61x")
+target_position = Vector3(0, 0.5, 0)
+debug_shape_custom_color = Color(0, 0.654902, 0, 1)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_default_blend_time = 0.05
 libraries = {
@@ -260,5 +271,18 @@ libraries = {
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_tth2s")
+
+[node name="Walking" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.893113, 0)
+stream = ExtResource("5_j10ok")
+
+[node name="Jumping" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.886762, 0)
+stream = ExtResource("6_65bml")
+
+[node name="Running" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.899468, 0)
+stream = ExtResource("7_ttvpd")
+volume_db = 80.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
