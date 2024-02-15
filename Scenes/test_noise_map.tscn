@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bvmhhbni57eds"]
 
 [ext_resource type="Script" path="res://Scripts/test_noise_map.gd" id="1_s8bo8"]
-[ext_resource type="Gradient" uid="uid://upu0fncbm0tm" path="res://Tres/tile_gradient.tres" id="2_dn0nc"]
+[ext_resource type="Gradient" uid="uid://upu0fncbm0tm" path="res://tile_gradient.tres" id="2_dn0nc"]
 [ext_resource type="Texture2D" uid="uid://4wy4xhmegjrl" path="res://addons/kenney_particle_pack/circle_05.png" id="3_q6d15"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_qb2lh"]

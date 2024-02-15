@@ -1,2 +1,3 @@
 res://Scenes/test_noise_map.tscn
 res://tile_gradient.tres
+res://Scripts/test_noise_map.gd

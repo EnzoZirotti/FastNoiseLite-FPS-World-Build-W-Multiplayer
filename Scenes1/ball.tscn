@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgd8tsg0g5p12"]
+
+[ext_resource type="Script" path="res://Scenes/ball.gd" id="1_rsvwy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w3yit"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osyif"]
+albedo_color = Color(0.639216, 0, 0.0745098, 1)
+roughness_texture = SubResource("CompressedTexture2D_w3yit")
+
+[sub_resource type="SphereMesh" id="SphereMesh_sqeib"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1mqic"]
+
+[node name="Ball" type="RigidBody3D"]
+mass = 0.01
+inertia = Vector3(80, 80, 80)
+gravity_scale = -51.9
+freeze_mode = 1
+script = ExtResource("1_rsvwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_osyif")
+mesh = SubResource("SphereMesh_sqeib")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1mqic")

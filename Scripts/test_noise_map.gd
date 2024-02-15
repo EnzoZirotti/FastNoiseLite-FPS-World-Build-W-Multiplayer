@@ -34,7 +34,7 @@ var timer_update : float = 0.0
 var speed : float = 0.1 - (50 / 1000.0)
 
 func _ready():
-	player_scene = preload("res://player.tscn")
+	player_scene = preload("res://Scenes/player.tscn")
 	
 #
 #
