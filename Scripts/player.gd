@@ -45,7 +45,9 @@ signal health_changed(health_value)
 @onready var walkingsound = $Walking
 @onready var jumpingsound = $Jumping
 @onready var runningsound = $Running
-@onready var shootingsount = $Shooting
+@onready var shootingsound = $Shooting
+@onready var pistol = $Head/Camera3D/Pistol
+
 
 
 
@@ -98,6 +100,8 @@ func _unhandled_input(event):
 	if Input.is_action_just_pressed("shoot") \
 			and anim_player.current_animation != "shoot":
 		play_shoot_effects.rpc()
+		shootingsound.transform.origin  = pistol.global_position
+		shootingsound.play()
 		
 		if sight.is_colliding():
 			var hit_player = sight.get_collider()
@@ -133,6 +137,8 @@ func _input(event):
 func _physics_process(_delta):
 	if not is_multiplayer_authority(): return
 	
+	
+
 	
 	# Add the gravity.
 	if not is_on_floor():

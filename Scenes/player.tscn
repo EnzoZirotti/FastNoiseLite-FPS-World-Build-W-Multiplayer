@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cavqgevef4gns"]
+[gd_scene load_steps=24 format=3 uid="uid://cavqgevef4gns"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qlf6w"]
 [ext_resource type="PackedScene" uid="uid://djowi7msgciex" path="res://Blend/Pistol.blend" id="2_a7ryn"]
@@ -7,11 +7,11 @@
 [ext_resource type="AudioStream" uid="uid://clvr7vot4udqq" path="res://Sounds/concrete-footsteps-6752.mp3" id="5_j10ok"]
 [ext_resource type="AudioStream" uid="uid://degj0cgbl76er" path="res://Sounds/Jump3.wav" id="6_65bml"]
 [ext_resource type="AudioStream" uid="uid://bg8thkpday1nc" path="res://Sounds/running-1-6846.mp3" id="7_ttvpd"]
+[ext_resource type="AudioStream" uid="uid://bf3p20qr7215u" path="res://Sounds/single-gunshot-54-40780.mp3" id="8_vm4dy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_b6qhr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2tfh8"]
-height = 1.93809
 
 [sub_resource type="Gradient" id="Gradient_apqvj"]
 offsets = PackedFloat32Array(0, 0.210811, 1)
@@ -69,6 +69,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(1.74846e-07, 1.4399, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:shape:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0259771, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.496995, -0.168388)]
 }
 
 [sub_resource type="Animation" id="Animation_uweha"]
@@ -157,8 +193,48 @@ tracks/1/keys = {
 "values": [Vector3(-0.603317, 1.00505, 0.750327), Vector3(-1.11701, 1.67776, -0.355246)]
 }
 
+[sub_resource type="Animation" id="Animation_ku652"]
+resource_name = "Crouch"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0259771, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.496995, -0.168388)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0y0y5"]
 _data = {
+"Crouch": SubResource("Animation_ku652"),
 "RESET": SubResource("Animation_wmsvw"),
 "idle": SubResource("Animation_uweha"),
 "move": SubResource("Animation_vsmm6"),
@@ -292,10 +368,11 @@ max_db = 6.0
 panning_strength = 3.0
 
 [node name="Shooting" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.899468, 0)
-volume_db = 80.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777609, 0.218073, -1.26042)
+stream = ExtResource("8_vm4dy")
+volume_db = 59.91
 unit_size = 0.1
 max_db = 6.0
-panning_strength = 3.0
+panning_strength = 0.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
